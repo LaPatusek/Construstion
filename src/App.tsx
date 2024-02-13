@@ -1,25 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import Footer from './Components/Footer/Footer';
+import Nav from './Components/Nav/Nav';
+import About from './Pages/About';
+import Kontakt from './Pages/Kontakt';
+import Main from './Pages/Main';
+import Offer from './Pages/Offer';
+import Projects from './Pages/Projects';
 
 function App() {
+  const { pathname, hash, key } = useLocation();
+
+  useEffect(() => {
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    } else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Nav />
+      <main>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/projekty' element={<Projects />} />
+          <Route path='/oferta' element={<Offer />} />
+          <Route path='/kontakt' element={<Kontakt />} />
+          <Route path='/o-nas' element={<About />} />
+          <Route path='*' element={<Main />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Fragment>
   );
 }
 

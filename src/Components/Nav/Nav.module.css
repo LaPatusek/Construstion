@@ -1,0 +1,25 @@
+.nav {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0rem 4.5rem;
+}
+
+.navbar {
+  grid-template-columns: repeat(4, 1fr);
+  justify-self: right;
+}
+
+.navbar a {
+  justify-self: center;
+  color: #45261e;
+  font-size: 28px;
+  letter-spacing: 0.1px;
+  font-weight: bold;
+  user-select: none;
+  padding: 25px 30px 20px 30px;
+  transition: all 300ms;
+}
+
+.navbar a:hover {
+  background-color: #45261e;
+  color: #fff;
+}
