@@ -1,0 +1,101 @@
+.wrap {
+  width: 65%;
+  margin: 4rem auto;
+}
+
+.first-section {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 7rem;
+}
+
+.first-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+.first-section p {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.second-section h3 {
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 0.2px;
+  margin-bottom: 20px;
+}
+
+.box-wrap {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+}
+
+.box {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #fff;
+  background-color: #ff975f;
+  padding: 35px 30px;
+  border-radius: 20px;
+  border: 2px solid #ff752b;
+}
+
+.box span {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+}
+
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.number {
+  transition: --num 3s;
+  counter-set: num var(--num);
+  user-select: none;
+}
+
+.first-active-box .number {
+  --num: 10000;
+}
+
+.second-active-box .number {
+  --num: 2500;
+}
+
+.third-active-box .number {
+  --num: 800;
+}
+
+.number::after {
+  content: counter(num);
+}
+
+.box h4 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  margin-top: 5px;
+}
+
+.icon {
+  height: fit-content;
+  justify-self: right;
+  background-color: #ff752b;
+  padding: 10px;
+  border-radius: 20px;
+  transform: translateY(-14px);
+}
+
+.icon svg {
+  transform: translateY(2px);
+}
+
+.mid-icon svg {
+  transform: translateY(0);
+}

@@ -1,6 +1,6 @@
 .nav {
   grid-template-columns: repeat(2, 1fr);
-  padding: 0rem 4.5rem;
+  padding: 0 4.5rem;
 }
 
 .navbar {
@@ -20,6 +20,6 @@
 }
 
 .navbar a:hover {
-  background-color: #45261e;
+  background-color: rgba(69, 38, 30, 0.9);
   color: #fff;
 }

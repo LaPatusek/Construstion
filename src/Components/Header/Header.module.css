@@ -1,4 +1,33 @@
-.header {
-  background-color: #794334;
-  height: 50dvh;
+.header img {
+  width: 100%;
+}
+
+.header-box {
+  position: absolute;
+  right: 7.5%;
+  bottom: 12.5%;
+  padding: 20px 45px 40px;
+  background-color: rgba(121, 67, 52, 0.9);
+}
+
+.header-box h1 {
+  font-size: 68px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.header-box a {
+  background-color: #ff8c4c;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  transition: all 250ms;
+}
+
+.header-box a:hover {
+  background-color: #ff752b;
 }
