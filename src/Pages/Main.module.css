@@ -55,7 +55,7 @@
 }
 
 .number {
-  transition: --num 3s;
+  transition: --num 4.5s;
   counter-set: num var(--num);
   user-select: none;
 }
@@ -98,4 +98,21 @@
 
 .mid-icon svg {
   transform: translateY(0);
+}
+
+.third-section-wrap {
+  padding: 2.5rem 0 4rem 0;
+  background-color: #ff975f;
+}
+
+.third-section {
+  width: 65%;
+  margin: 0rem auto;
+}
+
+.third-section h3 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 0.2px;
 }

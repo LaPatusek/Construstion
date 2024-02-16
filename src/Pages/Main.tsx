@@ -80,8 +80,10 @@ const Main: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className={styles['third-section']}>
-        <h3>Odkryj nasze projekty </h3>
+      <div className={styles['third-section-wrap']}>
+        <div className={styles['third-section']}>
+          <h3>Odkryj nasze usługi</h3>
+        </div>
       </div>
     </Fragment>
   );
