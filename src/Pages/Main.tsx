@@ -1,5 +1,8 @@
 import { Global, House, People } from 'iconsax-react';
 import React, { Fragment, useRef } from 'react';
+import house from '../Assets/dom.jpg';
+import flat from '../Assets/mieszkanie.jpg';
+import construction from '../Assets/przemysl.jpg';
 import Header from '../Components/Header/Header';
 import useObserver from '../Components/hooks/useObserver';
 import styles from './Main.module.css';
@@ -83,6 +86,24 @@ const Main: React.FC = () => {
       <div className={styles['third-section-wrap']}>
         <div className={styles['third-section']}>
           <h3>Odkryj nasze usługi</h3>
+          <div className={`${styles['boxes-wrap']} grid`}>
+            <div className={styles['left-box']}>
+              <img src={construction} alt='Budownictwo Przemysłowe' />
+              <h4>Budownictwo przemysłowe</h4>
+            </div>
+
+            <div className={`grid`} style={{ rowGap: '10px' }}>
+              <div className={styles['right-box']}>
+                <img src={house} alt='Budowa Domów Jednorodzinnych' />
+                <h4>Budowa domów jednorodzinnych</h4>
+              </div>
+
+              <div className={styles['right-box']}>
+                <img src={flat} alt='Remonty i Modernizacja Mieszkań' />
+                <h4>Remonty i modernizacja mieszkań</h4>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Fragment>

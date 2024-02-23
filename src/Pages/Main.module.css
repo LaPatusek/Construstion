@@ -106,7 +106,7 @@
 }
 
 .third-section {
-  width: 65%;
+  width: 80%;
   margin: 0rem auto;
 }
 
@@ -115,4 +115,94 @@
   font-weight: bold;
   font-size: 36px;
   letter-spacing: 0.2px;
+}
+
+.boxes-wrap {
+  padding-top: 1rem;
+  column-gap: 10px;
+  grid-template-columns: 65% 35%;
+}
+
+.right-box,
+.left-box {
+  position: relative;
+  cursor: pointer;
+}
+
+.right-box:hover h4::after,
+.left-box:hover h4::after{
+  width: 100%;
+}
+
+.right-box::after {
+  height: 25%;
+}
+
+.left-box::after {
+  height: 20%;
+}
+
+.right-box::after,
+.left-box::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(26, 26, 26, 1) 0%,
+    rgba(26, 26, 26, 0.9) 25%,
+    rgba(26, 26, 26, 0.8) 55%,
+    rgba(26, 26, 26, 0.6) 75%,
+    rgba(26, 26, 26, 0.4) 85%,
+    rgba(26, 26, 26, 0.1) 95%,
+    rgba(26, 26, 26, 0) 100%
+  );
+}
+
+.left-box img,
+.right-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.boxes-wrap h4 {
+  position: absolute;
+  bottom: 1.3rem;
+  color: #fff;
+  z-index: 10;
+  user-select: none;
+  letter-spacing: 0.2px;
+  font-weight: bold;
+}
+
+.boxes-wrap h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 400ms;
+}
+
+.left-box h4 {
+  left: 2rem;
+  font-size: 42px;
+}
+
+.left-box h4::after {
+  height: 4px;
+}
+
+.right-box h4::after {
+  height: 2px;
+}
+
+.right-box h4 {
+  left: 1rem;
+  font-size: 26px;
 }
