@@ -1,0 +1,104 @@
+.title-wrap {
+  padding: 6rem 0;
+  background-color: var(--main-orange);
+  color: #fff;
+}
+
+.title {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title h1 {
+  font-size: 44px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+}
+
+.title h2 {
+  width: 40%;
+  font-size: 24px;
+}
+
+.projects {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+  row-gap: 25px;
+  width: 80%;
+  margin: 2rem auto 4rem auto;
+}
+
+.box {
+  cursor: pointer;
+}
+
+.box:hover h3 {
+  color: rgb(121, 67, 52);
+}
+
+.box:hover h3::before {
+  width: 100%;
+}
+
+.box:hover .image-wrap::before,
+.box:hover .image-wrap svg {
+  opacity: 1;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-wrap {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrap::before {
+  content: '';
+  position: absolute;
+  right: -110px;
+  bottom: -110px;
+  background-color: rgba(121, 67, 52, 0.9);
+  height: 210px;
+  width: 210px;
+  rotate: 45deg;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.image-wrap svg {
+  position: absolute;
+  right: 23px;
+  bottom: 23px;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.box h3 {
+  position: relative;
+  width: fit-content;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 5px 0;
+  letter-spacing: 0.2px;
+  transition: all 250ms;
+}
+
+.box h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background-color: rgb(121, 67, 52);
+  transition: all 250ms;
+}
+
+.box h4 {
+  font-size: 22px;
+}

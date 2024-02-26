@@ -1,3 +1,75 @@
 .footer {
-  background-color: #ff975f;
+  background-color: var(--main-orange);
+  color: #fff;
+}
+
+.wrap {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.wrap hr {
+  border: 0;
+  height: 2px;
+  background-color: #fff;
+}
+
+.navigation {
+  width: fit-content;
+}
+
+.navigation a {
+  position: relative;
+  color: #fff;
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navigation a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 300ms;
+}
+
+.navigation a:hover::before {
+  width: 100%;
+}
+
+.lower {
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+}
+
+.lower h4 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+.lower a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.lower span {
+  font-size: 18px;
+  font-weight: bold;
+  justify-self: right;
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+.lower span:hover {
+  text-decoration: underline;
+}
+
+.lower span > svg {
+  transform: translateY(4.5px);
 }

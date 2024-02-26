@@ -55,7 +55,7 @@
 }
 
 .number {
-  transition: --num 4.5s;
+  transition: --num 3s;
   counter-set: num var(--num);
   user-select: none;
 }
