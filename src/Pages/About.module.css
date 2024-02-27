@@ -1,0 +1,116 @@
+.about {
+  padding: 4rem 0;
+}
+
+.title {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title h1 {
+  font-size: 36px;
+  letter-spacing: 0.2px;
+  font-weight: bold;
+  color: #ff8c4c;
+}
+
+.title h2 {
+  width: 60%;
+  font-size: 24px;
+  color: rgb(70, 70, 70);
+  line-height: 26px;
+}
+
+.title hr {
+  border: 0;
+  height: 1px;
+  background-color: #ff8c4c;
+}
+
+.second-section {
+  padding-top: 6rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.second-section img {
+  width: 100%;
+}
+
+.left-section {
+  justify-self: right;
+  padding: 4rem 2rem;
+  width: 75%;
+}
+
+.right-section {
+  padding: 4rem 2rem;
+  width: 75%;
+}
+
+.second-section h3 {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  color: #ff8c4c;
+}
+
+.second-section hr {
+  height: 2px;
+  background-color: #ff8c4c;
+  border: 0;
+}
+
+.second-section p {
+  font-size: 20px;
+}
+
+.approach {
+  width: 80%;
+  margin: 6rem auto 0;
+}
+
+.approach h3 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+.approach h4 {
+  text-align: center;
+  font-size: 24px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.boxes {
+  padding: 2rem 0 0;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 18px;
+  column-gap: 20px;
+}
+
+.box img {
+  width: 100%;
+}
+
+.box h5 {
+  margin: 10px 0 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff8c4c;
+}
+
+.box ol {
+  list-style-type: disc;
+  margin-left: 18px;
+}
+
+.box li {
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.box li::marker {
+  color: #ff8c4c;
+}
