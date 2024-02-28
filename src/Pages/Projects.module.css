@@ -13,6 +13,7 @@
   font-size: 44px;
   font-weight: bold;
   letter-spacing: 0.4px;
+  user-select: none;
 }
 
 .title h2 {

@@ -1,0 +1,110 @@
+.title-wrap {
+  padding: 6rem 0;
+  background-color: var(--main-orange);
+}
+
+.title {
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title h1 {
+  font-size: 44px;
+  font-weight: bold;
+  user-select: none;
+  letter-spacing: 0.4px;
+}
+
+.title h2 {
+  font-size: 24px;
+  width: 65%;
+}
+
+.form-wrap {
+  width: 60%;
+  margin: 4rem auto;
+}
+
+.form-wrap form {
+  display: grid;
+}
+
+.form-wrap label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+}
+
+.form-wrap label span {
+  color: red;
+}
+
+.name-surname {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+}
+
+.name-surname input {
+  width: 100%;
+}
+
+.form-wrap form input {
+  border-bottom: 1px solid var(--main-orange);
+  margin-bottom: 8px;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  background-color: rgb(233, 233, 233);
+  padding: 10px 15px 6px;
+}
+
+.form-wrap form input::placeholder,
+.form-wrap form textarea::placeholder {
+  letter-spacing: 0.2px;
+  font-size: 20px;
+  color: #231f20;
+}
+
+.form-wrap form input:focus-visible {
+  background-color: #fcdaba;
+}
+
+.form-wrap form select {
+  cursor: pointer;
+  padding: 4px 10px;
+  font-size: 24px;
+  margin-bottom: 8px;
+  background-color: rgb(233, 233, 233);
+  color: #231f20;
+  border: 0;
+}
+
+.form-wrap form textarea {
+  background-color: rgb(233, 233, 233);
+  padding: 10px 15px 6px;
+  letter-spacing: 0.2px;
+  font-size: 20px;
+  resize: none;
+  border-bottom: 1px solid var(--main-orange);
+}
+
+.buttons {
+  margin-top: 18px;
+}
+
+.buttons button {
+  cursor: pointer;
+  margin: 0 40px 0 0;
+  font-size: 24px;
+  letter-spacing: 0.2px;
+  border-bottom: 2px solid var(--main-orange);
+  background-color: #fcdaba;
+  padding: 12px 22px 10px;
+  transition: all 350ms;
+}
+
+.buttons button:hover {
+  background-color: var(--main-orange);
+}
