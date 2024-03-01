@@ -81,6 +81,10 @@
   border: 0;
 }
 
+.form-wrap form select:focus-visible {
+  outline: none;
+}
+
 .form-wrap form textarea {
   background-color: rgb(233, 233, 233);
   padding: 10px 15px 6px;

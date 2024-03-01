@@ -129,9 +129,10 @@ const Kontakt: React.FC = () => {
           <label htmlFor='temat'>
             Temat<span>*</span>
           </label>
-          <select id='temat'>
-            {/* zmienić na button z opcjami wyboru przy użyciu arraya i state */}
-            <option>Wybierz</option>
+          <select id='temat' defaultValue={'default'}>
+            <option value={'default'} disabled hidden>
+              Wybierz
+            </option>
             <option>Opcja 1 Opcja 1 Opcja 1</option>
             <option>Opcja 2</option>
             <option>Opcja 3</option>

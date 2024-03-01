@@ -6,9 +6,11 @@ import styles from './Nav.module.css';
 const Nav: React.FC = () => {
   return (
     <nav className={`${styles.nav} grid`}>
+      <div className={styles.logo}>
         <Link to='/'>
           <img src={logo} alt='Architektura SNW' />
         </Link>
+      </div>
 
       <div className={`${styles.navbar} grid`}>
         <Link to='/oferta'>Oferta</Link>

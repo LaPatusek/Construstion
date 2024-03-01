@@ -3,7 +3,11 @@
   padding: 0 4.5rem;
 }
 
-.nav img {
+.logo {
+  width: fit-content;
+}
+
+.logo img {
   height: 130px;
   width: auto;
 }
@@ -20,7 +24,7 @@
   letter-spacing: 0.1px;
   font-weight: bold;
   user-select: none;
-  padding: 25px 30px 20px 30px;
+  padding: 25px 30px 20px;
   transition: all 300ms;
   max-height: 75px;
 }
