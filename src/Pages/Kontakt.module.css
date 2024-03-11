@@ -71,14 +71,56 @@
   background-color: #fcdaba;
 }
 
-.form-wrap form select {
+.form-wrap .topic-select {
   cursor: pointer;
   padding: 4px 10px;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 8px;
+  letter-spacing: 0.2px;
   background-color: rgb(233, 233, 233);
   color: #231f20;
-  border: 0;
+}
+
+.form-wrap .topic-select {
+  padding: 8px 15px;
+  width: 100%;
+}
+
+.form-wrap .topic-select svg {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-wrap .options {
+  position: absolute;
+  left: 0;
+  top: 36px;
+  width: 100%;
+  display: grid;
+  background-color: rgb(233, 233, 233);
+  border-bottom: 1px solid var(--main-orange);
+  border-top: 1px solid black;
+}
+
+.form-wrap .options .option {
+  padding: 4px 15px;
+  width: 100%;
+  height: fit-content;
+}
+
+.form-wrap .options .option:hover {
+  background-color: #fcdaba;
+}
+
+.form-wrap .options .option span {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+  letter-spacing: 0.2px;
 }
 
 .form-wrap form select:focus-visible {

@@ -1,8 +1,28 @@
-import React from 'react';
+import { ArrowDown2 } from 'iconsax-react';
+import React, { useState } from 'react';
 import useInput from '../Components/hooks/useInput';
 import styles from './Kontakt.module.css';
 
 const Kontakt: React.FC = () => {
+  const [topicState, ChangeTopicState] = useState<boolean>(false);
+  const [pickedOption, setPickedOption] = useState('Wybierz');
+
+  const optionsToPick = [
+    'Opcja nr 1',
+    'Opcja nr 2',
+    'Opcja nr 3',
+    'Opcja nr 4',
+  ];
+
+  const TopicHandler = () => {
+    ChangeTopicState((s) => !s);
+  };
+
+  const optionPicker = (index: number) => {
+    setPickedOption(optionsToPick[index]);
+    ChangeTopicState(false);
+  };
+
   const {
     value: enteredName,
     isValid: nameIsValid,
@@ -19,6 +39,16 @@ const Kontakt: React.FC = () => {
     valueChangeHandler: surNameChangeHandler,
     inputBlurHandler: surNameBlurHandler,
     reset: surNameReset,
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
+
+  const {
+    value: enteredFirm,
+    isValid: firmIsValid,
+    valueChangeHandler: firmChangeHandler,
+    inputBlurHandler: firmBlurHandler,
+    reset: firmReset,
   } = useInput({
     validateValue: (value: string) => value.trim() !== '',
   });
@@ -72,6 +102,18 @@ const Kontakt: React.FC = () => {
       return;
     }
 
+    setPickedOption('Wybierz');
+    firmReset();
+    nameReset();
+    surNameReset();
+    mailReset();
+    phoneNumberReset();
+    messageReset();
+  };
+
+  const resetHandler = () => {
+    setPickedOption('Wybierz');
+    firmReset();
     nameReset();
     surNameReset();
     mailReset();
@@ -126,23 +168,40 @@ const Kontakt: React.FC = () => {
               />
             </div>
           </div>
-          <label htmlFor='temat'>
+          <label>
             Temat<span>*</span>
           </label>
-          <select id='temat' defaultValue={'default'}>
-            <option value={'default'} disabled hidden>
-              Wybierz
-            </option>
-            <option>Opcja 1 Opcja 1 Opcja 1</option>
-            <option>Opcja 2</option>
-            <option>Opcja 3</option>
-          </select>
+          <div className='relative'>
+            <div
+              id='temat'
+              className={`${styles['topic-select']} relative`}
+              onClick={TopicHandler}
+            >
+              {pickedOption} <ArrowDown2 size={'16'} variant='Bold' />
+            </div>
+            {topicState && (
+              <div className={styles.options}>
+                {optionsToPick.map((opcja, index) => (
+                  <div
+                    className={styles.option}
+                    onClick={() => optionPicker(index)}
+                    key={opcja}
+                  >
+                    <span>{opcja}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
           <label htmlFor='company'>Nazwa firmy</label>
           <input
             type='text'
             id='company'
             placeholder='Nazwa firmy'
             autoComplete='no'
+            value={enteredFirm}
+            onChange={firmChangeHandler}
+            onBlur={firmBlurHandler}
           />
           <label htmlFor='mail'>
             Email<span>*</span>
@@ -180,7 +239,9 @@ const Kontakt: React.FC = () => {
             onBlur={messageBlurHandler}
           />
           <div className={`${styles.buttons} flex`}>
-            <button type='button'>RESET</button>
+            <button type='button' onClick={resetHandler}>
+              RESET
+            </button>
             <button type='submit'>WYŚLIJ</button>
           </div>
         </form>

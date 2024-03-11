@@ -53,11 +53,6 @@
   letter-spacing: 0.2px;
 }
 
-.lower a {
-  color: #fff;
-  text-decoration: underline;
-}
-
 .lower span {
   font-size: 18px;
   font-weight: bold;

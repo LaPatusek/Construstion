@@ -21,14 +21,7 @@ const Footer: React.FC = () => {
         <hr />
         <div className={`${styles.lower} grid`}>
           <h4>
-            Strona wykonana przez Dawid Rusin -{' '}
-            <a
-              href='https://www.stronynawypasie.pl/'
-              target='_Blank'
-              rel='noreferrer'
-            >
-              Strony na Wypasie
-            </a>
+            Strona wykonana przez Dawid Rusin
           </h4>
           <span onClick={BackToTop}>
             Powrót na Górę <ArrowUp2 size={'20'} />
