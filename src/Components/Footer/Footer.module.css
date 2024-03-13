@@ -68,3 +68,32 @@
 .lower span > svg {
   transform: translateY(4.5px);
 }
+
+@media screen and (max-width: 1300px) {
+  .wrap {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navigation {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    row-gap: 5px;
+  }
+
+  .navigation a {
+    font-size: 22px;
+    margin-right: 0;
+  }
+
+  .navigation a:hover::before {
+    width: 0%;
+  }
+
+  .lower span:hover {
+    text-decoration: none;
+  }
+}

@@ -5,7 +5,7 @@ import styles from './Kontakt.module.css';
 
 const Kontakt: React.FC = () => {
   const [topicState, ChangeTopicState] = useState<boolean>(false);
-  const [pickedOption, setPickedOption] = useState('Wybierz');
+  const [pickedOption, setPickedOption] = useState<string>('Wybierz');
 
   const optionsToPick = [
     'Opcja nr 1',
@@ -45,7 +45,6 @@ const Kontakt: React.FC = () => {
 
   const {
     value: enteredFirm,
-    isValid: firmIsValid,
     valueChangeHandler: firmChangeHandler,
     inputBlurHandler: firmBlurHandler,
     reset: firmReset,
@@ -98,7 +97,8 @@ const Kontakt: React.FC = () => {
   const formHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formIsValid) {
+    if (!formIsValid || pickedOption === 'Wybierz') {
+      console.log('test');
       return;
     }
 

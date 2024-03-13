@@ -31,3 +31,21 @@
 .header-box a:hover {
   background-color: #ff752b;
 }
+
+
+@media screen and (max-width: 900px) {
+  .header img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 0;
+  }
+
+  .header-box {
+    position: relative;
+    width: 100%;
+    right: 0%;
+    bottom: 3px;
+    padding: 20px 45px 40px;
+  }
+}

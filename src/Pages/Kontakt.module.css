@@ -78,6 +78,7 @@
   margin-bottom: 8px;
   letter-spacing: 0.2px;
   background-color: rgb(233, 233, 233);
+  border-bottom: 1px solid var(--main-orange);
   color: #231f20;
 }
 
@@ -101,7 +102,6 @@
   display: grid;
   background-color: rgb(233, 233, 233);
   border-bottom: 1px solid var(--main-orange);
-  border-top: 1px solid black;
 }
 
 .form-wrap .options .option {
@@ -153,4 +153,40 @@
 
 .buttons button:hover {
   background-color: var(--main-orange);
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    width: 90%;
+  }
+
+  .title h2 {
+    width: 100%;
+  }
+
+  .form-wrap {
+    width: 95%;
+  }
+
+  .name-surname {
+    column-gap: 10px;
+  }
+
+  .form-wrap form input {
+    margin-bottom: 12px;
+  }
+
+  .form-wrap  .topic-select {
+    margin-bottom: 12px;
+  }
+
+  .buttons {
+    gap: 10px;
+    width: fit-content;
+    margin: 18px auto 0 auto;
+  }
+
+  .buttons button {
+    margin: 0;
+  }
 }

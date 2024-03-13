@@ -17,7 +17,7 @@ const Main: React.FC = () => {
     <Fragment>
       <Header />
       <div className={styles.wrap}>
-        <div className={`${styles['first-section']} grid`}>
+        <div className={styles['first-section']}>
           <div>
             <h2>Lorem ipsum dolor sit amet</h2>
             <p>

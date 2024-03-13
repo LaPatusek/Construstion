@@ -4,7 +4,6 @@
 }
 
 .first-section {
-  grid-template-columns: repeat(2, 1fr);
   margin-bottom: 7rem;
 }
 
@@ -17,6 +16,7 @@
 .first-section p {
   font-size: 20px;
   line-height: 22px;
+  width: 50%;
 }
 
 .second-section h3 {
@@ -130,7 +130,7 @@
 }
 
 .right-box:hover h4::after,
-.left-box:hover h4::after{
+.left-box:hover h4::after {
   width: 100%;
 }
 
@@ -205,4 +205,57 @@
 .right-box h4 {
   left: 1rem;
   font-size: 26px;
+}
+
+@media screen and (max-width: 1300px) {
+  .wrap {
+    width: 85%;
+  }
+
+  .third-section {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .first-section p {
+    width: 72.5%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrap {
+    width: 90%;
+  }
+
+  .first-section {
+    margin-bottom: 4rem;
+  }
+
+  .first-section p {
+    width: 100%;
+  }
+
+  .box-wrap {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 25px;
+  }
+
+  .third-section-wrap {
+    padding: 2.5rem 0 0.5rem 0;
+  }
+
+  .third-section h3 {
+    font-size: 34px;
+  }
+
+  .left-box h4 {
+    font-size: 26px;
+    left: 1rem;
+  }
+
+  .boxes-wrap {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+  }
 }
